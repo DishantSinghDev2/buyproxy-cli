@@ -1,0 +1,64 @@
+{
+  "name": "buyproxy-cli",
+  "version": "1.0.0",
+  "description": "The BuyProxy command-line tool \u2014 generate residential, mobile, ISP and datacenter proxies, check bandwidth, top up, and manage reseller customers from a beautiful terminal UI.",
+  "keywords": [
+    "buyproxy",
+    "proxy",
+    "proxies",
+    "cli",
+    "residential proxies",
+    "rotating proxies",
+    "mobile proxies",
+    "isp proxies",
+    "datacenter proxies",
+    "socks5",
+    "proxy generator",
+    "web scraping",
+    "terminal",
+    "tui",
+    "reseller"
+  ],
+  "homepage": "https://www.buyproxy.org/docs/sdks",
+  "bugs": {
+    "url": "https://github.com/DishantSinghDev2/buyproxy-cli/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DishantSinghDev2/buyproxy-cli.git"
+  },
+  "license": "MIT",
+  "author": "BuyProxy <support@buyproxy.org> (https://www.buyproxy.org)",
+  "type": "module",
+  "bin": {
+    "buyproxy": "bin/buyproxy.js"
+  },
+  "files": [
+    "bin",
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "buyproxy": "^1.0.0",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.0",
+    "vitest": "^3.2.0"
+  }
+}
