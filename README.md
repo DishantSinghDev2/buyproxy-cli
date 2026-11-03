@@ -11,23 +11,7 @@ The official command-line tool for [BuyProxy](https://www.buyproxy.org): generat
 
 ## Install
 
-Pick whichever you like — they all give you the same `buyproxy` command.
-
-```bash
-# Homebrew (macOS & Linux)
-brew install DishantSinghDev2/tap/buyproxy
-
-# npm
-npm install -g buyproxy-cli
-
-# try it without installing
-npx buyproxy-cli
-
-# one-line installer (uses npm if present, otherwise drops a single file in ~/.local/bin)
-curl -fsSL https://raw.githubusercontent.com/DishantSinghDev2/buyproxy-cli/main/install.sh | sh
-```
-
-Prefer a single file? Every [release](https://github.com/DishantSinghDev2/buyproxy-cli/releases) includes `buyproxy.mjs` — an executable with the whole CLI and **no dependencies**. Requires Node.js 18+.
+The CLI isn't released yet: it isn't on Homebrew or npm, and there's no release to download.
 
 ## Get started
 
@@ -77,7 +61,7 @@ Gradient banner, spinners, usage bars, boxed results and colour that respects `N
 
 | Command | What it does |
 |---|---|
-| `buyproxy generate [product]` | Generate proxies — rotating or sticky, geo-targeted (`-c US --city Austin -n 5 -s 10`) |
+| `buyproxy generate [product]` | Generate proxies — rotating or sticky, geo-targeted (`-c US -n 5 -s 10`) |
 | `buyproxy test` | Generate a proxy and **prove it works**: exit IP, location, network, latency |
 | `buyproxy balance` | Bandwidth left on every product, with usage bars |
 | `buyproxy plans` | Your plans and what each one can generate |
@@ -161,7 +145,7 @@ Key precedence: `--key` → `BUYPROXY_API_KEY` → saved config. Personal keys (
 
 **Where do I get an API key?** Create a free account at [buyproxy.org](https://www.buyproxy.org/signup), then **Dashboard → API keys**.
 
-**What does it cost?** The CLI is free and MIT-licensed. Proxy bandwidth starts at **$1.99/GB** — see `buyproxy products` for live prices.
+**What does it cost?** The CLI is free and MIT-licensed. Proxy bandwidth starts at **$0.29/GB** (IPv6) — residential is **$0.99/GB** — see `buyproxy products` for live prices.
 
 **What does `buyproxy test` contact?** It generates one proxy and requests `https://ipinfo.io/json` *through it* to show the exit IP, location and network — a few kilobytes of your bandwidth. Nothing else is sent anywhere.
 
